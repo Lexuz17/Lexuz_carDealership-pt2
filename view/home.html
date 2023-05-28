@@ -1,39 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
 
     <!-- Link home.css -->
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/all.css" />
 
     <!-- Link javaScript -->
     <script src="../javascript/home.js"></script>
+  </head>
 
-</head>
-<body>
-    <Nav>
-        <div class="language" id="lang">
-            <p class="indo-lang">
-                Indonesia
-            </p>
-            <p>|</p>
-            <p class="english-lang">
-                Englsih
-            </p>
-        </div>
-        <img src="../assets/global-assets/logo.svg" alt="logo">
-        <ul>
-            <li>Home</li>
-            <li>Cars</li>
-            <li>Workshop</li>
-        </ul>
-    </Nav>
+  <body>
+
+    <header>
+      <div class="brandhub-header__content">
+        <div class="brandhub-header__container">
+          <div class="brandhub-header__container-curtain"></div>
+          <div class="brandhub-header__solid">
+            <!-- Meta navigation -->
+            <div class="brandhub-meta-navigation">
+              <ul class="brandhub-meta-navigation__items">
+                <!-- Language switcher MetaNavbar-->
+                <li
+                  class="brandhub-meta-navigation__item brandhub-meta-navigation__item--language-switch"
+                  >
+                  <div>
+                    <div class="brandhub-language-switcher ">
+                      <brandhub-language-switcher>
+                        <ul class="brandhub-language-switcher__items">
     
-</body>
+                          <!-- Indoensia language -->
+                          <brandhub-language-switcher-item
+                            link-ref="#"
+                            label-desktop="Indonesian"
+                            label-mobile="Indonesian"
+                          >
+                            <div class="brandhub-languageInd-switcher-item">
+                              <a
+                                href="#"
+                                class="brandhub-language-switcher-item__link"
+                              >
+                                <span
+                                  class="brandhub-language-switcher-item__label-desktop"
+                                  >Indonesian</span
+                                >
+                              </a>
+                            </div>
+                          </brandhub-language-switcher-item>
+                          
+                          <!-- English Language -->
+                          <brandhub-language-switcher-item
+                            link-ref="#"
+                            label-desktop="English"
+                            label-mobile="English"
+                          >
+                            <div class="brandhub-language-switcher-item">
+                              <a
+                                href="#"
+                                class="brandhub-language-switcher-item__link"
+                              >
+                                <span
+                                  class="brandhub-language-switcher-item__label-desktop"
+                                  >English</span
+                                >
+                              </a>
+                            </div>
+                          </brandhub-language-switcher-item>
+    
+                        </ul>
+                      </brandhub-language-switcher>
+                    </div>
+                  </div>
+                </li>
+    
+                <!-- Privacy/Provider MetaNavbar -->
+                <li class="brandhub-meta-navigation__item brandhub-meta-navigation__item--privacy-notice"
+                >
+                  <button class="brandhub-meta-navigation__item-button">
+                    Provider/Privacy
+                  </button>
+                </li>
+    
+                <!-- Search MetaNavbar -->
+                <li class="brandhub-meta-navigation__item">
+                  <button
+                    class="brandhub-meta-navigation__item-button brandhub-meta-navigation__item-button--search"
+                  >
+                    <span>Search</span>
+                    <!-- blh ditambahain vector search.svg -->
+                  </button>
+                </li>
+    
+                <!-- Login MetaNavbar -->
+                <li class="brandhub-meta-navigation__item">
+                  <button
+                    class="brandhub-meta-navigation__item-button brandhub-meta-navigation__item-button--login"
+                  >
+                    <span>Login</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+    
+          <!-- Navbar Logo -->
+          <a href="#" class="brandhub-header__link">
+            <picture class="brandhub-header_logo">
+              <img
+                src="../assets/global-assets/logo.svg"
+                alt="Lexuz logo"
+                class="brandhub-picture brandhub-picture"
+              />
+            </picture>
+          </a>
+          
+          <!-- Navigation blur -->
+          <div class="brandhub-header__blur">
+            <div class="mainnavigation">
+              <ul class="mainnavigation_list">
+                <!-- Home button Navbar-->
+                <div class="mainnavigationitem brandhub-component-child">
+                  <brandhub-main-navigation-item
+                    item-text="Home"
+                    item-index="0"
+                    flyout-url="#"
+                  >
+                    <button class="brandhub-main-navigation-item">
+                      <span class="brandhub-main-navigation-item_text">Home</span>
+                    </button>
+                  </brandhub-main-navigation-item>
+                </div>
+    
+                <!-- Cars button Navbar-->
+                <div class="mainnavigationitem brandhub-component-child">
+                  <brandhub-main-navigation-item
+                    item-text="Cars"
+                    item-index="1"
+                    flyout-url="#"
+                  >
+                    <button class="brandhub-main-navigation-item">
+                      <span class="brandhub-main-navigation-item_text">Cars</span>
+                    </button>
+                  </brandhub-main-navigation-item>
+                </div>
+    
+                <!-- Workshop button Navbar -->
+                <div class="mainnavigationitem brandhub-component-child">
+                  <brandhub-main-navigation-item
+                    item-text="Workshop"
+                    item-index="2"
+                    flyout-url="#"
+                  >
+                    <button class="brandhub-main-navigation-item">
+                      <span class="brandhub-main-navigation-item_text"
+                        >Workshop</span
+                      >
+                    </button>
+                  </brandhub-main-navigation-item>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    
+  </body>
 </html>

@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* max width 1023 */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    /* background-color: #000; */
+    /* color: white; */
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fefefe;
+    /* text-align: left; */
+}
+
+header{
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* brandhub-header__content */
+.brandhub-header__content {
+    background: #000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 950;
+}
+
+/* brandhub-header__container */
+.brandhub-header__container{
+    display: grid;
+    grid-template:
+        "left center right" auto
+        "mainMenu mainMenu mainMenu" auto/1fr 1fr 1fr;
+    position: relative;
+}
+
+.brandhub-header__container-curtain {
+    background-color: #000;
+    /* grid-area: left/left/right/right; */
+    z-index: 3;
+}
+
+/* brandhub solid */
+.brandhub-meta-navigation__item--language-switch {
+    align-items: center;
+    display: flex;
+}
+
+.brandhub-language-switcher brandhub-language-switcher-item{
+    display: inline-block;
+    background-color: white;
+}
+
+.brandhub-language-switcher brandhub-language-switcher-item a:hover{
+    text-decoration: none;
+}
+
+.brandhub-language-switcher .brandhub-languageInd-switcher-item:after {
+    content: "";
+    background: #957f7f;
+    display: inline-block;
+    height: 0.8857142857rem;
+    width: 1.5px;
+    margin-left: 0.9285714286rem;
+    margin-right: 0.9285714286rem;
+}
+
+.brandhub-language-switcher-item__label-desktop{
+    color: #9F9F9F;
+    transition: color 0.25s;
+}
+
+.brandhub-language-switcher-item__label-desktop:hover{
+    color: white;
+}
+
+.brandhub-meta-navigation {
+    padding: 0 2.5rem;
+}
+
+.brandhub-meta-navigation__items{
+    background-color: #fff;
+    display: flex;
+    padding: 20px 5px 15px 5px;
+    gap: 3rem;
+    font-size: .8571428571rem;
+}
+
+.brandhub-meta-navigation__item{
+    padding: 1px 4px;
+}
+
+.brandhub-meta-navigation__item button{
+    border: none;
+    background-color: transparent;
+    color: #9F9F9F;
+    justify-content: flex-start;
+    min-height: 1.1em;
+    min-width: 3.5714285714rem;
+    padding: .0714285714rem .2857142857rem;
+    position: relative;
+    transition: color .25s;
+}
+
+.brandhub-meta-navigation__item button:hover{
+    color: white;
+    border: none;
+}
+
+.brandhub-meta-navigation__item--privacy-notice {
+    margin-right: auto;
+}
+
+/* brandhub image */
+.brandhub-header__link{
+    background-color: aqua;
+    box-sizing: content-box;
+    display: grid;
+    grid-area: center;
+    grid-template: "logo" 100%/auto;
+    height: 3rem;
+    justify-content: center;
+    justify-self: center;
+    overflow: hidden;
+    padding: 1.0714285714rem;
+    z-index: 5;
+}
+
+.brandhub-header__logo{
+    display: flex;
+    grid-area: logo;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.brandhub-header__link img{
+    height: 60px;
+    width: auto;
+}
+
+
+/* brandhub blur */
+.brandhub-header__blur{
+    background-color: #fff;
+    opacity: 0.9;
+    width: 100%;
+}
+
+.mainnavigation_list{
+    justify-content: center;
+    display: flex;
+
+}
+
+.mainnavigationitem{
+    /* background-color: aqua; */
+    padding: .7142857143rem 2.5714285714rem calc(.71429rem + var(--scroll-progress)*2.14286rem);
+}
+
+.mainnavigationitem button{
+    background-color: transparent;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+}
