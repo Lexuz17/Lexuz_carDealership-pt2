@@ -2,7 +2,7 @@
 
 /* max width 1023 */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,7 +13,7 @@
     text-decoration: none;
 }
 
-body{
+body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -22,7 +22,7 @@ body{
     /* text-align: left; */
 }
 
-header{
+header {
     width: 100%;
     align-items: center;
     justify-content: space-between;
@@ -35,21 +35,8 @@ header{
     top: 0;
     width: 100%;
     z-index: 950;
-}
+    height: 87px;
 
-/* brandhub-header__container */
-.brandhub-header__container{
-    display: grid;
-    grid-template:
-        "left center right" auto
-        "mainMenu mainMenu mainMenu" auto/1fr 1fr 1fr;
-    position: relative;
-}
-
-.brandhub-header__container-curtain {
-    background-color: #000;
-    /* grid-area: left/left/right/right; */
-    z-index: 3;
 }
 
 /* brandhub solid */
@@ -58,12 +45,12 @@ header{
     display: flex;
 }
 
-.brandhub-language-switcher brandhub-language-switcher-item{
+.brandhub-language-switcher brandhub-language-switcher-item {
     display: inline-block;
-    background-color: white;
+    /* background-color: white; */
 }
 
-.brandhub-language-switcher brandhub-language-switcher-item a:hover{
+.brandhub-language-switcher brandhub-language-switcher-item a:hover {
     text-decoration: none;
 }
 
@@ -77,32 +64,37 @@ header{
     margin-right: 0.9285714286rem;
 }
 
-.brandhub-language-switcher-item__label-desktop{
+.brandhub-language-switcher-item__label-desktop {
     color: #9F9F9F;
     transition: color 0.25s;
 }
 
-.brandhub-language-switcher-item__label-desktop:hover{
-    color: white;
+.randhub-language-switcher-item .english{
+    color: #fff;
+}
+
+.brandhub-language-switcher-item__label-desktop:hover {
+    color: #fff;
 }
 
 .brandhub-meta-navigation {
     padding: 0 2.5rem;
+    background-color: transparent;
 }
 
-.brandhub-meta-navigation__items{
-    background-color: #fff;
+.brandhub-meta-navigation__items {
+    background: transparent;
     display: flex;
     padding: 20px 5px 15px 5px;
     gap: 3rem;
     font-size: .8571428571rem;
 }
 
-.brandhub-meta-navigation__item{
+.brandhub-meta-navigation__item {
     padding: 1px 4px;
 }
 
-.brandhub-meta-navigation__item button{
+.brandhub-meta-navigation__item button {
     border: none;
     background-color: transparent;
     color: #9F9F9F;
@@ -114,7 +106,7 @@ header{
     transition: color .25s;
 }
 
-.brandhub-meta-navigation__item button:hover{
+.brandhub-meta-navigation__item button:hover {
     color: white;
     border: none;
 }
@@ -124,21 +116,23 @@ header{
 }
 
 /* brandhub image */
-.brandhub-header__link{
-    background-color: aqua;
+.brandhub-header__link {
     box-sizing: content-box;
     display: grid;
-    grid-area: center;
+    width: min-content;
+    margin: auto;
     grid-template: "logo" 100%/auto;
-    height: 3rem;
+    /* height: 3rem; */
     justify-content: center;
     justify-self: center;
     overflow: hidden;
-    padding: 1.0714285714rem;
+    /* padding: 1.0714285714rem; */
     z-index: 5;
+    position: relative;
+    top: -60px;
 }
 
-.brandhub-header__logo{
+.brandhub-header__logo {
     display: flex;
     grid-area: logo;
     height: 100%;
@@ -146,33 +140,47 @@ header{
     margin-right: auto;
 }
 
-.brandhub-header__link img{
-    height: 60px;
+.brandhub-header__link img {
+    height: 55px;
     width: auto;
 }
 
 
 /* brandhub blur */
-.brandhub-header__blur{
-    background-color: #fff;
-    opacity: 0.9;
+.brandhub-header__blur {
+    background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
+    position: relative;
+    top: -45px;
+    backdrop-filter: blur(120px);
+    z-index: -2;
 }
 
-.mainnavigation_list{
+.mainnavigation_list {
     justify-content: center;
     display: flex;
-
+    color: #fff;
+    transition: color 0.25s;
 }
 
-.mainnavigationitem{
+.mainnavigationitem {
     /* background-color: aqua; */
     padding: .7142857143rem 2.5714285714rem calc(.71429rem + var(--scroll-progress)*2.14286rem);
 }
 
-.mainnavigationitem button{
+.mainnavigationitem button {
     background-color: transparent;
     border: none;
-    font-weight: 500;
-    font-size: 16px;
+    color: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    transition: color 0.5s;
+}
+
+.mainnavigation_list:hover{
+    color: #828282;
+}
+
+.mainnavigationitem button:hover {
+    color: #fff;
 }
